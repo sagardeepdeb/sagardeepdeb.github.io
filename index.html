@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name</title>
     <style>
         * {
             margin: 0;
@@ -12,468 +12,528 @@
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             line-height: 1.6;
             color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
+            background-color: #fdfdfd;
+            font-size: 16px;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
-            padding: 20px;
-        }
-
-        .profile-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 40px;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            margin-bottom: 30px;
-            transition: transform 0.3s ease;
-        }
-
-        .profile-card:hover {
-            transform: translateY(-5px);
+            padding: 60px 40px;
         }
 
         .header {
+            margin-bottom: 60px;
             text-align: center;
+        }
+
+        .profile-section {
+            display: flex;
+            align-items: center;
+            gap: 40px;
             margin-bottom: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
         }
 
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
-            border: 5px solid #667eea;
-            margin: 0 auto 20px;
             background: #f0f0f0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 48px;
-            color: #667eea;
+            font-size: 72px;
+            color: #ccc;
+            border: 3px solid #e0e0e0;
+            flex-shrink: 0;
+        }
+
+        .profile-info {
+            flex: 1;
+            min-width: 300px;
         }
 
         .name {
-            font-size: 2.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            margin-bottom: 10px;
-        }
-
-        .title {
-            font-size: 1.3rem;
-            color: #666;
+            font-size: 3rem;
+            font-weight: 300;
+            color: #2c3e50;
             margin-bottom: 20px;
+            letter-spacing: -1px;
         }
 
-        .contact-info {
+        .bio {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 30px;
+        }
+
+        .bio a {
+            color: #3498db;
+            text-decoration: none;
+            border-bottom: 1px solid transparent;
+            transition: border-bottom-color 0.3s ease;
+        }
+
+        .bio a:hover {
+            border-bottom-color: #3498db;
+        }
+
+        .contact-links {
             display: flex;
+            gap: 25px;
             justify-content: center;
-            gap: 30px;
+            margin-bottom: 40px;
             flex-wrap: wrap;
         }
 
-        .contact-item {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            font-size: 0.95rem;
-            color: #555;
-        }
-
-        .contact-item a {
-            color: #667eea;
+        .contact-link {
+            color: #666;
             text-decoration: none;
-            transition: color 0.3s ease;
+            font-size: 0.95rem;
+            padding: 8px 16px;
+            border: 1px solid #ddd;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            background: white;
         }
 
-        .contact-item a:hover {
-            color: #764ba2;
+        .contact-link:hover {
+            background: #3498db;
+            color: white;
+            border-color: #3498db;
+            transform: translateY(-2px);
         }
 
         .section {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 20px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
-        }
-
-        .section:hover {
-            transform: translateY(-3px);
+            margin-bottom: 50px;
         }
 
         .section-title {
             font-size: 1.8rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 20px;
-            position: relative;
+            font-weight: 400;
+            color: #2c3e50;
+            margin-bottom: 30px;
             padding-bottom: 10px;
+            border-bottom: 2px solid #ecf0f1;
+            position: relative;
         }
 
         .section-title::after {
             content: '';
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
             left: 0;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            border-radius: 2px;
+            width: 60px;
+            height: 2px;
+            background: #3498db;
         }
 
-        .about-text {
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #555;
-        }
-
-        .experience-item, .education-item, .project-item {
-            margin-bottom: 25px;
-            padding: 20px;
-            background: rgba(102, 126, 234, 0.05);
-            border-radius: 15px;
-            border-left: 4px solid #667eea;
+        .education-item, .experience-item, .publication-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
             transition: all 0.3s ease;
         }
 
-        .experience-item:hover, .education-item:hover, .project-item:hover {
-            background: rgba(102, 126, 234, 0.1);
-            transform: translateX(5px);
+        .education-item:hover, .experience-item:hover, .publication-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 10px;
         }
 
         .item-title {
             font-size: 1.2rem;
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
-        }
-
-        .item-subtitle {
-            font-size: 1rem;
-            color: #667eea;
-            margin-bottom: 5px;
+            font-weight: 600;
+            color: #2c3e50;
         }
 
         .item-date {
             font-size: 0.9rem;
-            color: #888;
-            margin-bottom: 10px;
+            color: #7f8c8d;
+            font-weight: 500;
+        }
+
+        .item-subtitle {
+            font-size: 1rem;
+            color: #3498db;
+            margin-bottom: 8px;
         }
 
         .item-description {
-            color: #555;
+            color: #666;
             line-height: 1.6;
         }
 
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-        }
-
-        .skill-category {
-            background: rgba(102, 126, 234, 0.05);
-            padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-
-        .skill-category:hover {
-            transform: scale(1.05);
-            background: rgba(102, 126, 234, 0.1);
-        }
-
-        .skill-category h3 {
-            color: #667eea;
-            margin-bottom: 15px;
-        }
-
-        .skill-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            justify-content: center;
-        }
-
-        .skill-tag {
-            background: linear-gradient(135deg, #667eea, #764ba2);
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            transition: transform 0.2s ease;
-        }
-
-        .skill-tag:hover {
-            transform: scale(1.1);
-        }
-
-        .publication-item {
-            margin-bottom: 20px;
-            padding: 15px;
-            background: rgba(102, 126, 234, 0.02);
-            border-radius: 10px;
-            border: 1px solid rgba(102, 126, 234, 0.1);
-        }
-
         .publication-title {
-            font-weight: bold;
-            color: #333;
-            margin-bottom: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+            line-height: 1.4;
         }
 
         .publication-authors {
-            color: #667eea;
+            color: #666;
             margin-bottom: 5px;
+            font-size: 0.95rem;
         }
 
         .publication-venue {
-            color: #888;
+            color: #3498db;
             font-style: italic;
+            font-size: 0.95rem;
+        }
+
+        .research-interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .interest-tag {
+            background: #ecf0f1;
+            color: #2c3e50;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .interest-tag:hover {
+            background: #3498db;
+            color: white;
+            transform: scale(1.05);
+        }
+
+        .news-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+        }
+
+        .news-item {
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+        }
+
+        .news-date {
+            color: #7f8c8d;
+            font-weight: 500;
+            margin-right: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #ecf0f1;
+            color: #7f8c8d;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 768px) {
             .container {
-                padding: 10px;
+                padding: 40px 20px;
             }
-            
-            .profile-card {
-                padding: 20px;
-            }
-            
-            .name {
-                font-size: 2rem;
-            }
-            
-            .contact-info {
+
+            .profile-section {
                 flex-direction: column;
-                gap: 15px;
+                text-align: center;
+                gap: 30px;
             }
-            
-            .section {
+
+            .profile-image {
+                width: 150px;
+                height: 150px;
+                font-size: 54px;
+            }
+
+            .name {
+                font-size: 2.2rem;
+            }
+
+            .contact-links {
+                justify-content: center;
+            }
+
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .education-item, .experience-item, .publication-item {
                 padding: 20px;
             }
         }
 
-        .floating-animation {
-            animation: float 6s ease-in-out infinite;
+        /* Smooth scroll behavior */
+        html {
+            scroll-behavior: smooth;
         }
 
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+        /* Selection color */
+        ::selection {
+            background: #3498db;
+            color: white;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <!-- Profile Header -->
-        <div class="profile-card floating-animation">
-            <div class="header">
+        <div class="header">
+            <div class="profile-section">
                 <div class="profile-image">
                     👤
                 </div>
-                <h1 class="name">Your Name</h1>
-                <p class="title">Senior Research Scientist | AI/ML Researcher</p>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        📧 <a href="mailto:your.email@university.edu">your.email@university.edu</a>
-                    </div>
-                    <div class="contact-item">
-                        🔗 <a href="https://linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
-                    </div>
-                    <div class="contact-item">
-                        📄 <a href="#" target="_blank">CV/Resume</a>
-                    </div>
-                    <div class="contact-item">
-                        🎓 <a href="https://scholar.google.com" target="_blank">Google Scholar</a>
-                    </div>
+                <div class="profile-info">
+                    <h1 class="name">Your Name</h1>
+                    <p class="bio">
+                        I am a [year] year [degree] student at <a href="#" target="_blank">[University Name]</a> advised by <a href="#" target="_blank">[Advisor Name]</a>. 
+                        I am interested in [research areas]. I am supported by the [Fellowship/Grant Name] and the [Additional Fellowship].
+                    </p>
+                </div>
+            </div>
+            
+            <div class="contact-links">
+                <a href="mailto:your.email@university.edu" class="contact-link">Email</a>
+                <a href="#" target="_blank" class="contact-link">CV</a>
+                <a href="#" target="_blank" class="contact-link">Google Scholar</a>
+                <a href="#" target="_blank" class="contact-link">LinkedIn</a>
+                <a href="#" target="_blank" class="contact-link">GitHub</a>
+                <a href="#" target="_blank" class="contact-link">Twitter</a>
+            </div>
+        </div>
+
+        <!-- Research Interests -->
+        <div class="section">
+            <h2 class="section-title">Research Interests</h2>
+            <div class="research-interests">
+                <span class="interest-tag">Machine Learning</span>
+                <span class="interest-tag">Computational Biology</span>
+                <span class="interest-tag">AI for Health</span>
+                <span class="interest-tag">Deep Learning</span>
+                <span class="interest-tag">Bioinformatics</span>
+                <span class="interest-tag">Data Science</span>
+            </div>
+        </div>
+
+        <!-- News -->
+        <div class="section">
+            <h2 class="section-title">News</h2>
+            <div class="news-section">
+                <div class="news-item">
+                    <span class="news-date">Dec 2024</span>
+                    Paper accepted at [Conference/Journal Name]!
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Nov 2024</span>
+                    Presented research at [Conference Name] in [Location].
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Oct 2024</span>
+                    Started new research collaboration with [Institution/Lab].
+                </div>
+                <div class="news-item">
+                    <span class="news-date">Sep 2024</span>
+                    Awarded [Fellowship/Grant Name] for academic excellence.
                 </div>
             </div>
         </div>
 
-        <!-- About Section -->
-        <div class="section">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I am a Senior Research Scientist at [Your Institution/Company] working on cutting-edge research in artificial intelligence and machine learning. My research focuses on developing innovative solutions for complex problems in bioinformatics, deep learning, and computational biology. I have extensive experience in multi-modal learning, protein function prediction, and developing AI-based applications for healthcare and life sciences.
-            </p>
-        </div>
-
-        <!-- Experience Section -->
-        <div class="section">
-            <h2 class="section-title">Professional Experience</h2>
-            
-            <div class="experience-item">
-                <h3 class="item-title">Senior Research Scientist</h3>
-                <p class="item-subtitle">Cancer Center, Your University</p>
-                <p class="item-date">2023 - Present</p>
-                <p class="item-description">
-                    Leading research on next-generation virus genome sequencing and developing AI-based models for cancer research. Collaborating with interdisciplinary teams to advance computational biology applications.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3 class="item-title">Research Fellow</h3>
-                <p class="item-subtitle">Department of Computer Science, Previous Institution</p>
-                <p class="item-date">2020 - 2023</p>
-                <p class="item-description">
-                    Developed deep learning architectures for protein function prediction and worked on multi-objective optimization techniques for gene clustering and biomedical applications.
-                </p>
-            </div>
-
-            <div class="experience-item">
-                <h3 class="item-title">Research Scientist</h3>
-                <p class="item-subtitle">Biotech Company</p>
-                <p class="item-date">2018 - 2020</p>
-                <p class="item-description">
-                    Implemented machine learning solutions for drug discovery and protein structure analysis. Contributed to the development of web-based applications for protein function prediction.
-                </p>
-            </div>
-        </div>
-
-        <!-- Education Section -->
+        <!-- Education -->
         <div class="section">
             <h2 class="section-title">Education</h2>
             
             <div class="education-item">
-                <h3 class="item-title">Ph.D. in Computer Science</h3>
-                <p class="item-subtitle">Your University</p>
-                <p class="item-date">2014 - 2018</p>
-                <p class="item-description">
-                    Dissertation: "Advanced Machine Learning Techniques for Biological Data Analysis"
-                </p>
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">PhD in Computer Science</div>
+                        <div class="item-subtitle">Stanford University</div>
+                    </div>
+                    <div class="item-date">2024 - 2028 (expected)</div>
+                </div>
+                <div class="item-description">
+                    Advisor: [Professor Name]<br>
+                    Focus: AI for Health and Computational Biology<br>
+                    Fellowships: Stanford Graduate Fellowship, NSF Graduate Research Fellowship
+                </div>
             </div>
 
             <div class="education-item">
-                <h3 class="item-title">M.Tech in Information Technology</h3>
-                <p class="item-subtitle">Previous University</p>
-                <p class="item-date">2012 - 2014</p>
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">BS in Computer Science</div>
+                        <div class="item-subtitle">Brown University</div>
+                    </div>
+                    <div class="item-date">2020 - 2023</div>
+                </div>
+                <div class="item-description">
+                    Magna Cum Laude, Phi Beta Kappa<br>
+                    Relevant Coursework: Machine Learning, Algorithms, Data Structures, Statistics
+                </div>
+            </div>
+        </div>
+
+        <!-- Publications -->
+        <div class="section">
+            <h2 class="section-title">Publications</h2>
+            
+            <div class="publication-item">
+                <div class="publication-title">
+                    Deep Learning Approaches for Protein Function Prediction: A Comprehensive Survey
+                </div>
+                <div class="publication-authors">
+                    <strong>Your Name</strong>, Co-Author 1, Co-Author 2, Senior Author
+                </div>
+                <div class="publication-venue">
+                    Nature Machine Intelligence, 2024
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    Multi-Modal Learning for Biomedical Applications: Challenges and Opportunities
+                </div>
+                <div class="publication-authors">
+                    Co-Author 1, <strong>Your Name</strong>, Co-Author 2
+                </div>
+                <div class="publication-venue">
+                    Proceedings of ICML 2024
+                </div>
+            </div>
+
+            <div class="publication-item">
+                <div class="publication-title">
+                    AI-Driven Drug Discovery: From Molecular Design to Clinical Applications
+                </div>
+                <div class="publication-authors">
+                    <strong>Your Name</strong>, Research Team
+                </div>
+                <div class="publication-venue">
+                    Journal of Computational Biology, 2023
+                </div>
+            </div>
+        </div>
+
+        <!-- Experience -->
+        <div class="section">
+            <h2 class="section-title">Experience</h2>
+            
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Research Intern</div>
+                        <div class="item-subtitle">Google Research</div>
+                    </div>
+                    <div class="item-date">Summer 2024</div>
+                </div>
+                <div class="item-description">
+                    Worked on large-scale machine learning models for healthcare applications. 
+                    Developed novel architectures for medical image analysis and collaborated with 
+                    clinical researchers on real-world deployment.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Teaching Assistant</div>
+                        <div class="item-subtitle">CS229: Machine Learning</div>
+                    </div>
+                    <div class="item-date">Fall 2023</div>
+                </div>
+                <div class="item-description">
+                    Led weekly discussion sections for 50+ students, held office hours, 
+                    and graded assignments. Received excellent teaching evaluations with 
+                    an average rating of 4.8/5.0.
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Software Engineering Intern</div>
+                        <div class="item-subtitle">Meta AI</div>
+                    </div>
+                    <div class="item-date">Summer 2023</div>
+                </div>
+                <div class="item-description">
+                    Contributed to the development of AI infrastructure for large language models. 
+                    Implemented optimization algorithms that improved training efficiency by 20%.
+                </div>
+            </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="section">
+            <h2 class="section-title">Awards & Honors</h2>
+            
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">NSF Graduate Research Fellowship</div>
+                    </div>
+                    <div class="item-date">2024</div>
+                </div>
+                <div class="item-description">
+                    Prestigious fellowship supporting graduate research in computer science.
+                </div>
             </div>
 
             <div class="education-item">
-                <h3 class="item-title">B.Tech in Computer Science</h3>
-                <p class="item-subtitle">Undergraduate University</p>
-                <p class="item-date">2008 - 2012</p>
-            </div>
-        </div>
-
-        <!-- Research Projects -->
-        <div class="section">
-            <h2 class="section-title">Key Research Projects</h2>
-            
-            <div class="project-item">
-                <h3 class="item-title">Multi-Modal Protein Function Prediction</h3>
-                <p class="item-description">
-                    Developing deep learning-based multi-modal architecture to predict protein functions by utilizing protein structure, sequence, and interaction information. This work has been implemented as a web-based application.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <h3 class="item-title">COVID-19 AI Solutions</h3>
-                <p class="item-description">
-                    Developed AI-based models to tackle various aspects of the COVID-19 crisis, including diagnosis from medical imaging, protein structure estimation, and knowledge graph creation.
-                </p>
-            </div>
-
-            <div class="project-item">
-                <h3 class="item-title">Gene Clustering Optimization</h3>
-                <p class="item-description">
-                    Exploited multi-objective optimization techniques, ensemble methods, and generative models for improving gene clustering, which is fundamental for understanding gene characteristics and hub gene prediction.
-                </p>
-            </div>
-        </div>
-
-        <!-- Skills Section -->
-        <div class="section">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Deep Learning</span>
-                        <span class="skill-tag">TensorFlow</span>
-                        <span class="skill-tag">PyTorch</span>
-                        <span class="skill-tag">Scikit-learn</span>
-                        <span class="skill-tag">Neural Networks</span>
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Stanford Graduate Fellowship</div>
                     </div>
+                    <div class="item-date">2024</div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Bioinformatics</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Protein Analysis</span>
-                        <span class="skill-tag">Genomics</span>
-                        <span class="skill-tag">Sequence Analysis</span>
-                        <span class="skill-tag">Structure Prediction</span>
-                    </div>
+                <div class="item-description">
+                    Full funding for PhD studies at Stanford University.
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Programming</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Python</span>
-                        <span class="skill-tag">R</span>
-                        <span class="skill-tag">Java</span>
-                        <span class="skill-tag">C++</span>
-                        <span class="skill-tag">SQL</span>
+            </div>
+
+            <div class="education-item">
+                <div class="item-header">
+                    <div>
+                        <div class="item-title">Phi Beta Kappa</div>
                     </div>
+                    <div class="item-date">2023</div>
                 </div>
-                
-                <div class="skill-category">
-                    <h3>Tools & Technologies</h3>
-                    <div class="skill-tags">
-                        <span class="skill-tag">Git</span>
-                        <span class="skill-tag">Docker</span>
-                        <span class="skill-tag">AWS</span>
-                        <span class="skill-tag">Linux</span>
-                        <span class="skill-tag">Jupyter</span>
-                    </div>
+                <div class="item-description">
+                    Academic honor society recognizing excellence in liberal arts and sciences.
                 </div>
             </div>
         </div>
 
-        <!-- Publications Section -->
-        <div class="section">
-            <h2 class="section-title">Selected Publications</h2>
-            
-            <div class="publication-item">
-                <div class="publication-title">Deep Multi-Modal Learning for Protein Function Prediction</div>
-                <div class="publication-authors">Your Name, Co-Author 1, Co-Author 2</div>
-                <div class="publication-venue">Journal of Computational Biology, 2024</div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">AI-Driven Approaches for COVID-19 Protein Structure Analysis</div>
-                <div class="publication-authors">Your Name, Research Team</div>
-                <div class="publication-venue">Nature Machine Intelligence, 2023</div>
-            </div>
-
-            <div class="publication-item">
-                <div class="publication-title">Multi-Objective Optimization for Gene Clustering</div>
-                <div class="publication-authors">Your Name, Collaborators</div>
-                <div class="publication-venue">Bioinformatics, 2022</div>
-            </div>
+        <!-- Footer -->
+        <div class="footer">
+            <p>Last updated: August 2024</p>
         </div>
     </div>
 
     <script>
-        // Add smooth scrolling and interactive effects
+        // Smooth fade-in animation for sections
         document.addEventListener('DOMContentLoaded', function() {
-            // Animate sections on scroll
-            const sections = document.querySelectorAll('.section');
+            const sections = document.querySelectorAll('.section, .header');
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
@@ -481,19 +541,19 @@
                         entry.target.style.transform = 'translateY(0)';
                     }
                 });
-            });
+            }, { threshold: 0.1 });
 
             sections.forEach(section => {
                 section.style.opacity = '0';
                 section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+                section.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
                 observer.observe(section);
             });
 
-            // Add click effects to skill tags
-            document.querySelectorAll('.skill-tag').forEach(tag => {
+            // Add click animation to interest tags
+            document.querySelectorAll('.interest-tag').forEach(tag => {
                 tag.addEventListener('click', function() {
-                    this.style.transform = 'scale(1.2)';
+                    this.style.transform = 'scale(1.1)';
                     setTimeout(() => {
                         this.style.transform = 'scale(1)';
                     }, 200);
