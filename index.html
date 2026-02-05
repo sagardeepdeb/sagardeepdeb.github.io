@@ -132,19 +132,54 @@
             background: #3498db;
         }
 
-        .education-item, .experience-item, .publication-item {
-            margin-bottom: 30px;
-            padding: 25px;
-            background: white;
-            border-radius: 8px;
-            border: 1px solid #f0f0f0;
-            transition: all 0.3s ease;
-        }
+        .education-item,
+.experience-item,
+.publication-item,
+.resource-item {
+    margin-bottom: 30px;
+    padding: 25px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #f0f0f0;
+    transition: all 0.3s ease;
+}
 
-        .education-item:hover, .experience-item:hover, .publication-item:hover {
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transform: translateY(-2px);
-        }
+.education-item:hover,
+.experience-item:hover,
+.publication-item:hover,
+.resource-item:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+.resource-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.resource-links {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.resource-link {
+    font-size: 0.95rem;
+    color: #3498db;
+    text-decoration: none;
+    padding: 6px 14px;
+    border: 1px solid #3498db;
+    border-radius: 18px;
+    transition: all 0.3s ease;
+}
+
+.resource-link:hover {
+    background: #3498db;
+    color: white;
+}
+
 
         .item-header {
             display: flex;
