@@ -281,6 +281,46 @@
             color: #7f8c8d;
             font-size: 0.9rem;
         }
+        .intro-section {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    justify-content: center;
+    margin-bottom: 50px;
+    flex-wrap: wrap;
+}
+
+.intro-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.intro-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.intro-text {
+    max-width: 500px;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .intro-text {
+        max-width: 100%;
+    }
+}
+
 
         @media (max-width: 768px) {
             .container {
@@ -333,21 +373,25 @@
     <div class="container">
         <!-- Profile Header -->
         <div class="header">
-           <div class="profile-photo">
-    <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg"
-         alt="Sagar Deep Deb">
+    <div class="intro-section">
+        <div class="intro-photo">
+            <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg"
+                 alt="Sagar Deep Deb">
+        </div>
+
+        <div class="intro-text">
+            <h1 class="name">Sagar Deep Deb</h1>
+            <p class="bio">
+                I am an Assistant Professor at the University of Petroleum and Energy Studies (UPES),
+                working at the intersection of machine learning, deep learning, and healthcare.
+                My research focuses on biomedical signal and image analysis, ventilator dyssynchrony,
+                and clinical decision-support systems. I hold a Ph.D. (2024) in Electrical Engineering
+                and previously completed a postdoctoral fellowship at IIT Bombay.
+            </p>
+        </div>
+    </div>
 </div>
 
-
-
-                <div class="profile-info">
-                    <h1 class="name">Sagar Deep Deb</h1>
-                    <p class="bio">
-                        I am an Assistant Professor at the University of Petroleum and Energy Studies (UPES), working at the intersection of machine learning, deep learning, and healthcare. 
-                        My research focuses on biomedical signal and image analysis, ventilator dyssynchrony, and clinical decision-support systems. I hold a Ph.D. (2024) in Electrical Engineering 
-                        and previously completed a postdoctoral fellowship at IIT Bombay.                    </p>
-                </div>
-            </div>
             
             <div class="contact-links">
                 <a href="mailto:sagardeepdeb@gmail.com" class="contact-link">Email</a>
