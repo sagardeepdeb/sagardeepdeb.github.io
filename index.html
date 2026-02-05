@@ -38,40 +38,23 @@
             flex-wrap: wrap;
             justify-content: center;
         }
-        .banner-image {
-    width: 100%;
-    max-height: 300px; /* adjust height as needed */
+
+     .profile-photo {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
     overflow: hidden;
-    margin-bottom: 40px;
-    border-radius: 10px; /* optional: for slightly rounded corners */
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* optional: subtle shadow */
+    flex-shrink: 0;
+    border: 3px solid #e0e0e0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
-.banner-image img {
+.profile-photo img {
     width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover; /* ensures good aspect ratio if height is fixed */
+    height: 100%;
+    object-fit: cover;
 }
 
-        .profile-image {
-            width: 500px;
-            height: 500px;
-            border-radius: 50%;
-            background: #f0f0f0;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 72px;
-            color: #ccc;
-            border: 3px solid #e0e0e0;
-            flex-shrink: 0;
-        }
-
-        .profile-info {
-            flex: 1;
-            min-width: 300px;
-        }
 
         .name {
             font-size: 3rem;
@@ -315,11 +298,11 @@
     <div class="container">
         <!-- Profile Header -->
         <div class="header">
-            <div class="profile-section">
-                <div class="banner-image">
-  <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg" 
-       alt="Sagar Deep Deb" />
+           <div class="profile-photo">
+    <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg"
+         alt="Sagar Deep Deb">
 </div>
+
 
 
                 <div class="profile-info">
