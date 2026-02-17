@@ -19,15 +19,16 @@
             font-size: 16px;
         }
 
-.container {
-    max-width: 1100px;
-}
-
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 60px;
+        }
 
         .header {
-    width: 100%;
-    max-width: none;
-}
+            width: 100%;
+            max-width: none;
+        }
 
         .profile-section {
             display: flex;
@@ -38,22 +39,21 @@
             justify-content: center;
         }
 
-     .profile-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 3px solid #e0e0e0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+        .profile-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
 
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
+        .profile-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .name {
             font-size: 3rem;
@@ -132,53 +132,53 @@
         }
 
         .education-item,
-.experience-item,
-.publication-item,
-.resource-item {
-    margin-bottom: 30px;
-    padding: 25px;
-    background: white;
-    border-radius: 8px;
-    border: 1px solid #f0f0f0;
-    transition: all 0.3s ease;
-}
+        .experience-item,
+        .publication-item,
+        .resource-item {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #f0f0f0;
+            transition: all 0.3s ease;
+        }
 
-.education-item:hover,
-.experience-item:hover,
-.publication-item:hover,
-.resource-item:hover {
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-    transform: translateY(-2px);
-}
-.resource-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #2c3e50;
-    margin-bottom: 8px;
-}
+        .education-item:hover,
+        .experience-item:hover,
+        .publication-item:hover,
+        .resource-item:hover {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transform: translateY(-2px);
+        }
 
-.resource-links {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-}
+        .resource-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 8px;
+        }
 
-.resource-link {
-    font-size: 0.95rem;
-    color: #3498db;
-    text-decoration: none;
-    padding: 6px 14px;
-    border: 1px solid #3498db;
-    border-radius: 18px;
-    transition: all 0.3s ease;
-}
+        .resource-links {
+            margin-top: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
 
-.resource-link:hover {
-    background: #3498db;
-    color: white;
-}
+        .resource-link {
+            font-size: 0.95rem;
+            color: #3498db;
+            text-decoration: none;
+            padding: 6px 14px;
+            border: 1px solid #3498db;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+        }
 
+        .resource-link:hover {
+            background: #3498db;
+            color: white;
+        }
 
         .item-header {
             display: flex;
@@ -280,70 +280,57 @@
             color: #7f8c8d;
             font-size: 0.9rem;
         }
+
         .intro-section {
-    display: flex;
-    align-items: center;
-    gap: 50px;
-    justify-content: center;
-    margin-bottom: 50px;
-    flex-wrap: wrap;
-}
-        .intro-section {
-    align-items: center;
-}
-.intro-section {
-    max-width: 1200px;
-    margin: 0 auto;
-}
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            justify-content: center;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
 
+        .intro-photo {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 3px solid #e0e0e0;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
 
-.intro-photo {
-    width: 220px;
-    height: 220px;
-    border-radius: 50%;
-    overflow: hidden;
-    flex-shrink: 0;
-    border: 3px solid #e0e0e0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
+        .intro-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
-.intro-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.intro-text {
-    max-width: 500px;
-}
-
-@media (max-width: 768px) {
-    .intro-section {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .intro-text {
-        max-width: 100%;
-    }
-}
-
+        .intro-text {
+            max-width: 500px;
+        }
 
         @media (max-width: 768px) {
             .container {
-                padding: 40px 20px;
+                padding: 30px 20px;
+            }
+
+            .intro-section {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .intro-text {
+                max-width: 100%;
             }
 
             .profile-section {
                 flex-direction: column;
                 text-align: center;
                 gap: 30px;
-            }
-
-            .profile-image {
-                width: 300px;
-                height: 300px;
-                font-size: 54px;
             }
 
             .name {
@@ -364,12 +351,10 @@
             }
         }
 
-        /* Smooth scroll behavior */
         html {
             scroll-behavior: smooth;
         }
 
-        /* Selection color */
         ::selection {
             background: #3498db;
             color: white;
@@ -380,34 +365,31 @@
     <div class="container">
         <!-- Profile Header -->
         <div class="header">
-    <div class="intro-section">
-        <div class="intro-photo">
-            <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg"
-                 alt="Sagar Deep Deb">
-        </div>
+            <div class="intro-section">
+                <div class="intro-photo">
+                    <img src="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/IMG_20250815_102426439_HDR.jpg"
+                         alt="Sagar Deep Deb">
+                </div>
 
-        <div class="intro-text">
-            <h1 class="name">Sagar Deep Deb</h1>
-            <p class="bio">
-                I am an Assistant Professor at the University of Petroleum and Energy Studies (UPES),
-                working at the intersection of machine learning, deep learning, and healthcare.
-                My research focuses on biomedical signal and image analysis, ventilator dyssynchrony,
-                and clinical decision-support systems. I hold a Ph.D. (2024) in Electrical Engineering
-                from IIT Patna and previously completed a postdoctoral fellowship at IIT Bombay before joining UPES.
-            </p>
-        </div>
-    </div>
-</div>
-
-            
-            <div class="contact-links">
-                <a href="mailto:sagardeepdeb@gmail.com" class="contact-link">Email</a>
-                <a href="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/my_CV.pdf" target="_blank" class="contact-link">CV</a>
-                <a href="https://scholar.google.com/citations?user=GrXwISUAAAAJ&hl=en" target="_blank" class="contact-link">Google Scholar</a>
-                <a href="https://www.linkedin.com/in/sagar-deep-deb-15b581a4/" target="_blank" class="contact-link">LinkedIn</a>
-                <a href="https://github.com/sagardeepdeb" target="_blank" class="contact-link">GitHub</a>
-
+                <div class="intro-text">
+                    <h1 class="name">Sagar Deep Deb</h1>
+                    <p class="bio">
+                        I am an Assistant Professor at the University of Petroleum and Energy Studies (UPES),
+                        working at the intersection of machine learning, deep learning, and healthcare.
+                        My research focuses on biomedical signal and image analysis, ventilator dyssynchrony,
+                        and clinical decision-support systems. I hold a Ph.D. (2024) in Electrical Engineering
+                        from IIT Patna and previously completed a postdoctoral fellowship at IIT Bombay before joining UPES.
+                    </p>
+                </div>
             </div>
+        </div>
+
+        <div class="contact-links">
+            <a href="mailto:sagardeepdeb@gmail.com" class="contact-link">Email</a>
+            <a href="https://raw.githubusercontent.com/sagardeepdeb/sagardeepdeb.github.io/main/my_CV.pdf" target="_blank" class="contact-link">CV</a>
+            <a href="https://scholar.google.com/citations?user=GrXwISUAAAAJ&hl=en" target="_blank" class="contact-link">Google Scholar</a>
+            <a href="https://www.linkedin.com/in/sagar-deep-deb-15b581a4/" target="_blank" class="contact-link">LinkedIn</a>
+            <a href="https://github.com/sagardeepdeb" target="_blank" class="contact-link">GitHub</a>
         </div>
 
         <!-- Research Interests -->
@@ -418,7 +400,6 @@
                 <span class="interest-tag">Image Processing</span>
                 <span class="interest-tag">Deep Learning</span>
                 <span class="interest-tag">AI for Health</span>
-
             </div>
         </div>
 
@@ -448,20 +429,19 @@
         <!-- Education -->
         <div class="section">
             <h2 class="section-title">Education</h2>
-            
+
             <div class="education-item">
                 <div class="item-header">
                     <div>
                         <div class="item-title">PhD in Electrical Engineering</div>
                         <div class="item-subtitle">
-                          <a href="https://www.iitp.ac.in/" target="_blank">Indian Institute of Technology Patna</a>
-                          </div>
-                          </div>
-                          <div class="item-date">2019 - 2024</div>
-                          </div>
-                          <div class="item-description">
-                             Advisor: <a href="https://sites.google.com/view/rajibkumarjha/home" target="_blank">Prof. Rajib Kumar Jha</a><br>
-
+                            <a href="https://www.iitp.ac.in/" target="_blank">Indian Institute of Technology Patna</a>
+                        </div>
+                    </div>
+                    <div class="item-date">2019 - 2024</div>
+                </div>
+                <div class="item-description">
+                    Advisor: <a href="https://sites.google.com/view/rajibkumarjha/home" target="_blank">Prof. Rajib Kumar Jha</a><br>
                     Focus: Deep Learning Techniques for Biomedical Image Segmentation and Classification<br>
                     Thesis title: Pectoral Muscle Segmentation, Breast Cancer Classification and Multimodal Data for Prognosis Prediction using Deep Learning Models
                 </div>
@@ -481,9 +461,8 @@
                     Thesis title: Frontal Facial Expression Recognition using Machine Learning and Deep Learning techniques.
                 </div>
             </div>
-        </div>
 
-        <div class="education-item">
+            <div class="education-item">
                 <div class="item-header">
                     <div>
                         <div class="item-title">BTech in Electronics and Communication Engineering</div>
@@ -492,11 +471,12 @@
                     <div class="item-date">2010 - 2016</div>
                 </div>
                 <div class="item-description">
-                    Department: <https://nerist.ac.in/electronics-and-communication-engineering/" target="_blank">Electronics and Communication Engineering</a><br>
-                    Subjects: Communication Engineering, Signal Processing, Linear Algebra<br>                
+                    Department: Electronics and Communication Engineering<br>
+                    Subjects: Communication Engineering, Signal Processing, Linear Algebra
                 </div>
             </div>
-        
+        </div>
+
         <!-- Experience -->
         <div class="section">
             <h2 class="section-title">Experience</h2>
@@ -504,17 +484,16 @@
                 <div class="item-header">
                     <div>
                         <div class="item-title">Assistant Professor</div>
-                        <div class="item-subtitle">School of Computer Science, University of Petroleum and Energy Studies </div>
+                        <div class="item-subtitle">School of Computer Science, University of Petroleum and Energy Studies</div>
                     </div>
                     <div class="item-date">September 2025 - Present</div>
                 </div>
                 <div class="item-description">
-                    Jan-July '26: Applied Machine Learning and Software Engineering course for BTech 3rd year students. 
+                    Jan-July '26: Applied Machine Learning and Software Engineering course for BTech 3rd year students.<br>
+                    Sept-Dec '25: Was responsible for handling both the theory and practical classes for the course "Applied Machine Learning" for first-year MTech and MCA students.
                 </div>
-                    Sept-Dec'25: Was responsible for handling both the theory and practical classes for the course "Applied Machine Learning" for first-year MTech and MCA students.
             </div>
 
-            
             <div class="experience-item">
                 <div class="item-header">
                     <div>
@@ -524,7 +503,7 @@
                     <div class="item-date">June 2024 - September 2025</div>
                 </div>
                 <div class="item-description">
-                    Worked on deep learning based models for Ventilator Dyssynchrony Detection and classification. 
+                    Worked on deep learning based models for Ventilator Dyssynchrony Detection and classification.
                     Developed algorithms for automatic breath segmentation and delineation from pressure and flow signals.
                     Worked with team members on Iterative Bootstrapping with U-Net for ECG Delineation.
                 </div>
@@ -539,53 +518,49 @@
                     <div class="item-date">Feb 2024 - May 2024</div>
                 </div>
                 <div class="item-description">
-                    Worked on fine-grained boxing punch classification. 
+                    Worked on fine-grained boxing punch classification.
+                </div>
+            </div>
+        </div>
+
+        <!-- Resources -->
+        <div class="section">
+            <h2 class="section-title">Resources</h2>
+
+            <div class="resource-item">
+                <div class="resource-title">
+                    Applied Machine Learning (BTech – 3rd Year)
+                </div>
+                <p class="item-description">
+                    Lecture notes, slides, and reference material used for the Applied Machine Learning course.
+                </p>
+                <div class="resource-links">
+                    <a href="https://sagardeepdeb.github.io/IntroductionToregression.pdf" target="_blank" class="resource-link">Lecture Notes (Introduction to Regression)</a>
+                    <a href="https://sagardeepdeb.github.io/LossFunctions.pdf" target="_blank" class="resource-link">Lecture Notes (Loss functions)</a>
+                    <a href="https://sagardeepdeb.github.io/OptimizationNotes.pdf" target="_blank" class="resource-link">Lecture Notes (Optimization)</a>
+                    <a href="https://sagardeepdeb.github.io/BCEAssignment.pdf" target="_blank" class="resource-link">Assignment 1</a>
+                    <a href="https://sagardeepdeb.github.io/MIT_Mathematics_for_Computer_Scientists.pdf" target="_blank" class="resource-link">Reference Material</a>
                 </div>
             </div>
 
-
-        <!-- Resources -->
-<div class="section">
-    <h2 class="section-title">Resources</h2>
-
-    <div class="resource-item">
-        <div class="resource-title">
-            Applied Machine Learning (BTech – 3rd Year)
+            <div class="resource-item">
+                <div class="resource-title">
+                    Software Engineering
+                </div>
+                <p class="item-description">
+                    Course material covering SDLC models, Agile methodologies, and case studies.
+                </p>
+                <div class="resource-links">
+                    <a href="https://sagardeepdeb.github.io/Software_Engg_Unit1.pdf" target="_blank" class="resource-link">Lecture Notes</a>
+                    <a href="https://sagardeepdeb.github.io/Software_Engg_assignment.pdf" target="_blank" class="resource-link">Assignments</a>
+                </div>
+            </div>
         </div>
-        <p class="item-description">
-            Lecture notes, slides, and reference material used for the Applied Machine Learning course.
-        </p>
 
-        <div class="resource-links">
-            <a href="https://sagardeepdeb.github.io/IntroductionToregression.pdf" target="_blank" class="resource-link">Lecture Notes (Introduction to Regression)</a>
-            <a href="https://sagardeepdeb.github.io/LossFunctions.pdf" target="_blank" class="resource-link">Lecture Notes (Loss functions)</a>
-            <a href="https://sagardeepdeb.github.io/OptimizationNotes.pdf" target="_blank" class="resource-link">Lecture Notes (Optimization)</a>
-            <a href="https://sagardeepdeb.github.io/BCEAssignment.pdf" target="_blank" class="resource-link"> Assignment 1 </a>
-            <a href="https://sagardeepdeb.github.io/MIT_Mathematics_for_Computer_Scientists.pdf" target="_blank" class="resource-link">Reference Material</a>
-        </div>
-    </div>
-
-    <div class="resource-item">
-        <div class="resource-title">
-            Software Engineering
-        </div>
-        <p class="item-description">
-            Course material covering SDLC models, Agile methodologies, and case studies.
-        </p>
-
-        <div class="resource-links">
-            <a href="https://sagardeepdeb.github.io/Software_Engg_Unit1.pdf"target="_blank" class="resource-link">Lecture Notes</a>
-            <a href="https://sagardeepdeb.github.io/Software_Engg_assignment.pdf" target="_blank" class="resource-link">Assignments</a>
-        </div>
-    </div>
-</div>
-
-
-            
-        <!-- Publications -->
+        <!-- Publications (Journals) -->
         <div class="section">
             <h2 class="section-title">Publications (Journals)</h2>
-            
+
             <div class="publication-item">
                 <div class="publication-title">
                     Synthesis of Ventilator Dyssynchrony Waveforms using a Hybrid Generative Model and a Lung Model
@@ -621,6 +596,7 @@
                     IEEE Transactions on Radiation and Plasma Medical Sciences, 2022
                 </div>
             </div>
+
             <div class="publication-item">
                 <div class="publication-title">
                     Segmentation of the pectoral muscle from mammograms using a U-Net having densely connected convolutional layers
@@ -632,6 +608,7 @@
                     Multimedia Tools and Applications, 2024
                 </div>
             </div>
+
             <div class="publication-item">
                 <div class="publication-title">
                     A multi-model ensemble-based deep convolution neural network structure for the detection of COVID-19
@@ -645,7 +622,7 @@
             </div>
         </div>
 
-        <!-- Publications -->
+        <!-- Publications (Conferences) -->
         <div class="section">
             <h2 class="section-title">Publications (Conferences)</h2>
 
@@ -661,7 +638,6 @@
                 </div>
             </div>
 
-            
             <div class="publication-item">
                 <div class="publication-title">
                     2-stage convolutional neural network for breast cancer detection from ultrasound images
@@ -691,7 +667,7 @@
                     Frontal facial expression recognition using parallel CNN model
                 </div>
                 <div class="publication-authors">
-                    <strong>Sagar Deep Deb</strong>, Chandraiit Choudhury, Manish Sharma, Fazal Ahmed Talukdar, Rabul Hussain Laskar
+                    <strong>Sagar Deep Deb</strong>, Chandrajit Choudhury, Manish Sharma, Fazal Ahmed Talukdar, Rabul Hussain Laskar
                 </div>
                 <div class="publication-venue">
                     2020 National Conference on Communications (NCC), IIT Kharagpur
@@ -702,7 +678,7 @@
         <!-- Awards -->
         <div class="section">
             <h2 class="section-title">Awards & Honors</h2>
-            
+
             <div class="education-item">
                 <div class="item-header">
                     <div>
@@ -726,6 +702,7 @@
                     Travel grant for participation in the Graduate Students' Day at NCC 2023 held at IIT Guwahati.
                 </div>
             </div>
+        </div>
 
         <!-- Footer -->
         <div class="footer">
@@ -734,7 +711,6 @@
     </div>
 
     <script>
-        // Smooth fade-in animation for sections
         document.addEventListener('DOMContentLoaded', function() {
             const sections = document.querySelectorAll('.section, .header');
             const observer = new IntersectionObserver((entries) => {
@@ -753,7 +729,6 @@
                 observer.observe(section);
             });
 
-            // Add click animation to interest tags
             document.querySelectorAll('.interest-tag').forEach(tag => {
                 tag.addEventListener('click', function() {
                     this.style.transform = 'scale(1.1)';
